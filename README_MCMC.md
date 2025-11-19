@@ -41,7 +41,7 @@ python bayesian_ti_alloy_mcmc.py
 
 The script will:
 1. Load and preprocess the DAX-Ti database
-2. Run 5000 MCMC iterations (1000 burn-in, thinning=2)
+2. Run 5000 MCMC iterations (4000 burn-in, thinning=2)
 3. Generate 10+ publication-quality plots
 4. Create 3 summary tables
 5. Compute MCMC diagnostics
@@ -49,7 +49,7 @@ The script will:
 
 ### Expected Runtime
 
-- **5000 iterations:** ~10-15 minutes on modern CPU
+- **10000 iterations:** ~10-15 minutes on modern CPU
 - **Progress bar** displays real-time iteration count
 
 ## Outputs
@@ -146,8 +146,8 @@ The manual Gibbs sampler iterates:
 - R-hat < 1.1 for all parameters
 
 **If convergence issues:**
-- Increase `n_iter` (e.g., 10000)
-- Increase `n_burn` (e.g., 2000)
+- Increase `n_iter` (e.g., 20000)
+- Increase `n_burn` (e.g., 8000)
 - Check for numerical issues in data preprocessing
 
 ### Model Assessment
